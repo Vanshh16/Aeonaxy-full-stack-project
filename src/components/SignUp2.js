@@ -30,17 +30,17 @@ function SignUp2() {
   };
   useEffect(() => {
     setForm({ ...form, work: isCard1Focused });
-  }, [isCard1Focused]);
+  }, [isCard1Focused, form]);
   useEffect(() => {
     setForm({ ...form, hire: isCard2Focused });
-  }, [isCard2Focused]);
+  }, [isCard2Focused, form]);
   useEffect(() => {
     setForm({ ...form, inspire: isCard3Focused });
-  }, [isCard3Focused]);
+  }, [isCard3Focused, form]);
 
   return (
     <section className="signup2">
-      <img className="dribble h-24 w-24" src={dribble}></img>
+      <img className="dribble h-24 w-24" alt="" src={dribble}></img>
       <div className="ret pb-6 items-left justify-start">
         <button
           onClick={handleClick}

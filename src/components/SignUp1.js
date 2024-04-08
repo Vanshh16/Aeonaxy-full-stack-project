@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
-import img from "../assets/images/img.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import dribble from "../assets/images/dribble.png";
 import Image from "./Cloudinary/Cloudinary";
@@ -31,11 +29,11 @@ function SignUp1() {
       url: `https://res.cloudinary.com/${process.env.REACT_APP_CLOUD_NAME}/image/upload/v1234567890/${publicId}`
     }
   });
-  },[publicId])
+  },[publicId, form])
 
   return (
     <section className="signup1">
-      <img className="dribble h-24 w-24" src={dribble}></img>
+      <img className="dribble h-24 w-24" alt="" src={dribble}></img>
       <form className="pt-20">
         <div className="space-y-10">
           <h1 className="text-base font-semibold leading-7 text-gray-900">

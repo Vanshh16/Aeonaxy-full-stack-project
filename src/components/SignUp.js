@@ -8,7 +8,7 @@ function SignUp() {
       <div className="col-span-3">
         <p className="signin">
           Already a member?{" "}
-          <a className="blue" href="#">
+          <a className="blue" href="/">
             Sign in
           </a>
         </p>

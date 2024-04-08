@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import CloudinaryUploadWidget from "./CloudinaryUploadWidget";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage, responsive, placeholder } from "@cloudinary/react";
+// import { Cloudinary } from "@cloudinary/url-gen";
 import img from "../../assets/images/img.png";
 
 // import "./styles.css";
@@ -39,19 +38,19 @@ function Image({returnPublicId}) {
   });
 
   // Create a Cloudinary instance and set your cloud name.
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName,
-    },
-  });
+  // const cld = new Cloudinary({
+  //   cloud: {
+  //     cloudName,
+  //   },
+  // });
 
-  const myImage = cld.image(publicId);
+  // const myImage = cld.image(publicId);
   returnPublicId(publicId);
 
   return (
     <div className="mt-2 flex rounded-lg px-1 py-10">
       <div className="text-left grid grid-cols-2">
-        <img className="h-40 w-40" src={publicId ? `https://res.cloudinary.com/${cloudName}/image/upload/v1234567890/${publicId}` : img} alt="Description of the image" />
+        <img className="h-40 w-40" src={publicId ? `https://res.cloudinary.com/${cloudName}/image/upload/v1234567890/${publicId}` : img} alt="" />
         <div className="mt-14 flex text-md leading-6 text-gray-600">
           <label
             htmlFor="file-upload"
@@ -78,34 +77,3 @@ function Image({returnPublicId}) {
 }
 
 export default Image;
-
-{
-  /* <div className="mt-2 flex rounded-lg px-1 py-10">
-  <div className="text-left grid grid-cols-2">
-    <img className="h-40 w-40 text-gray-300" src={img} />
-    <div className="mt-14 flex text-md leading-6 text-gray-600">
-      <label
-        htmlFor="file-upload"
-        className="relative cursor-pointer rounded-lg bg-white font-semibold"
-      >
-        <CloudinaryUploadWidget uwConfig={uwConfig} setPublicId={setPublicId} />
-
-        <input
-          id="file-upload"
-          name="file-upload"
-          type="file"
-          className="sr-only"
-        />
-        <p className="pl-1 text-base mt-6 font-semibold text-gray">
-          &gt; Or choose one of our defaults
-        </p>
-      </label>
-    </div>
-    <AdvancedImage
-      style={{ maxWidth: "100%" }}
-      cldImg={myImage}
-      plugins={[responsive(), placeholder()]}
-    />
-  </div>
-</div>; */
-}

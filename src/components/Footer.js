@@ -13,7 +13,7 @@ function Footer() {
     <section className="footer m-1 pl-2">
       <div className="grid md:grid-cols-7 grid-rows-2 gap-x-1">
         <div className="col-span-2">
-          <img className="h-24 w-24" src={dribble}></img>
+          <img className="h-24 w-24" alt="" src={dribble}></img>
           <p className="text-sm">
             Dribbble is the world's leading community for creatives to share,
             grow, and get hired.
