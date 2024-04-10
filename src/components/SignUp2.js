@@ -30,13 +30,13 @@ function SignUp2() {
   };
   useEffect(() => {
     setForm({ ...form, work: isCard1Focused });
-  }, [isCard1Focused, form]);
+  }, [isCard1Focused]);
   useEffect(() => {
     setForm({ ...form, hire: isCard2Focused });
-  }, [isCard2Focused, form]);
+  }, [isCard2Focused]);
   useEffect(() => {
     setForm({ ...form, inspire: isCard3Focused });
-  }, [isCard3Focused, form]);
+  }, [isCard3Focused]);
 
   return (
     <section className="signup2">

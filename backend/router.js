@@ -4,6 +4,7 @@ const User = require("./model");
 const router = express.Router();
 const transporter = require("./email.js");
 
+router.use(cors());
 router.options('*', cors());
 router.get("/",cors(), (req, res) => {});
 
