@@ -11,7 +11,7 @@ function SignUp1() {
   
   const [publicId, setPublicId] = useState("");
   const [form, setForm] = useState(data);
-  console.log(form);
+  // console.log(form);
   const navigate = useNavigate();
   function handleSubmit(event) {
     // event.preventDefault();
@@ -29,7 +29,7 @@ function SignUp1() {
       url: `https://res.cloudinary.com/${process.env.REACT_APP_CLOUD_NAME}/image/upload/v1234567890/${publicId}`
     }
   });
-  },[publicId, form])
+  },[publicId])
 
   return (
     <section className="signup1">

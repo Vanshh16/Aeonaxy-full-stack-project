@@ -16,8 +16,8 @@ dotenv.config({path:"./config/config.env"});
 connectDatabase();
 
 app.use(cors());
-app.use(express.json());
 app.options('*', cors());
+app.use(express.json());
 app.use("/", route);
 
 
