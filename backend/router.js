@@ -1,11 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const User = require("./model");
 const router = express.Router();
 const transporter = require("./email.js");
 
-router.get("/", (req, res) => {});
+router.get("/",cors(), (req, res) => {});
 
-router.post("/", async (req, res) => {
+router.post("/",cors(), async (req, res) => {
   console.log(req.body);
   try {
     const user = await User.create(req.body);
@@ -16,7 +17,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.post("/email", async (req, res) => {
+router.post("/email",cors(), async (req, res) => {
   console.log(req.body);
   try {
     const name = req.body.name;
