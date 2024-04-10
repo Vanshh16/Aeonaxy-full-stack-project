@@ -6,9 +6,11 @@ const transporter = require("./email.js");
 
 router.use(cors());
 router.options('*', cors());
-router.get("/",cors(), (req, res) => {});
+router.get("/",(req, res) => {
+  res.send("Connected");
+});
 
-router.post("/",cors(), async (req, res) => {
+router.post("/", async (req, res) => {
   console.log(req.body);
   try {
     const user = await User.create(req.body);
@@ -19,7 +21,7 @@ router.post("/",cors(), async (req, res) => {
   }
 });
 
-router.post("/email",cors(), async (req, res) => {
+router.post("/email", async (req, res) => {
   console.log(req.body);
   try {
     const name = req.body.name;
