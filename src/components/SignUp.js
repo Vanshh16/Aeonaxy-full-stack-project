@@ -3,8 +3,8 @@ import Form from "./Form";
 
 function SignUp() {
   return (
-    <section className="form grid grid-cols-5">
-      <div className="left col-span-2"></div>
+    <section className="form grid md:grid-cols-5">
+      <div className="left hidden md:block md:col-span-2"></div>
       <div className="col-span-3">
         <p className="signin">
           Already a member?{" "}
