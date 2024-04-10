@@ -23,7 +23,7 @@ function SignUp2() {
   const handleSubmit = async (event) => {
 
     event.preventDefault();
-    const response = await axios.post("https://aeonaxy-full-stack.onrender.com/", form);
+    const response = await axios.post("https://aeonaxy-full-stack-project-dribble.onrender.com/", form);
     console.log(form);
     console.log(response);
     navigate("/verify");
