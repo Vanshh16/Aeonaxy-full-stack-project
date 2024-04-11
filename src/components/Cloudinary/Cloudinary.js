@@ -9,7 +9,7 @@ import img from "../../assets/images/img.png";
 function Image({returnPublicId}) {
   const [publicId, setPublicId] = useState("");
   // Replace with your own cloud name
-  const [cloudName] = useState("dgehkce6s");
+  const [cloudName] = useState(process.env.REACT_APP_CLOUD_NAME);
   // Replace with your own upload preset
   const [uploadPreset] = useState("yadqj7uw");
 
