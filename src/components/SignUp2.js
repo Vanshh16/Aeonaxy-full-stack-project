@@ -26,6 +26,8 @@ function SignUp2() {
     const response = await axios.post("https://aeonaxy-full-stack-project-dribble.onrender.com/", form);
     console.log(form);
     console.log(response);
+    const email = await axios.post("https://aeonaxy-full-stack-project-dribble.onrender.com/email", form);
+    console.log(email);
     navigate("/verify");
   };
   useEffect(() => {
